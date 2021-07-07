@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href]{
+            /* background-color: yellow; */
+        }
+        a[href=abc]{
+            background-color: yellow;
+        }
+        a[class~="aaa"] {
+            background-color: yellowgreen;
+        }
+        a[class^="x"] {
+            background-color: turquoise;
+        }
+        /* a[class|="xx"] {
+            background-color: violet;
+        } */
+        a[class$="y"] {
+            border: 1px solid brown;
+        }
+        a[class*="b"] {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인 메뉴</a></li>
+        <li><a href="abc">메뉴 1</a></li>
+        <li><a href="" class="aaa bbb">메뉴 2</a></li>
+        <li><a href="" class="xx yy">메뉴 3</a></li>
+        <li><a href="" class="xx">메뉴 4</a></li>
+        
+    </ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: minmax(100px, 300px) minmax(100px, 300px) minmax(100px, 300px);
+            /* grid-template-rows: repeat(3, 1fr); */
+            /* grid-template-rows: minmax(50px, 200px) minmax(50px, 200px) minmax(50px, 200px); */
+            grid-template-rows: repeat(3, minmax(50px, 200px));
+            height: 55vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos iure nisi, magni quidem
+            reprehenderit, deleniti quod obcaecati reiciendis id doloribus recusandae mollitia, aliquam consequatur sed
+            placeat exercitationem libero nihil dolorum!</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quos deserunt voluptates
+            mollitia! Quisquam amet unde ut quaerat tempore illum minima ullam accusamus facere quae expedita sint
+            porro, explicabo aperiam.</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">H</div>
+        <div class="grid-item">I</div>
+    </div>
+</body>
+
+</html>

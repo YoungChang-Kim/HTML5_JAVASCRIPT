@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 선택자 */
+        * {
+            border: 1px solid blue;
+        }
+        /* 태그 선택자 */
+        p {
+            font-size: 1px;
+        }
+        /* id 선택자 */
+        #jj {
+            background-color: yellow;
+            font-size: 40px;
+        }
+        /* 클래스 선택자 */
+        .tang {
+            font-weight: bold;
+            background-color: green;
+            
+        }
+        /* 그룹 선택자 */
+        #jj, .tang{
+            font-style: italic;
+        }
+        /* p {
+            font-size: 8px;
+        } */
+        ul {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <h1>중식</h1>
+        <p id="jj" class="tang">짜장면</p>
+        <p>짬뽕</p>
+        <p class="tang">탕수육</p>
+        <p>팔보채</p>
+        <p>볶음밥</p>
+    </ul>
+</body>
+</html>
