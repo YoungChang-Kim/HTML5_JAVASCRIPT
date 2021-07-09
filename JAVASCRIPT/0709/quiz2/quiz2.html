@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="block"></div>
+    <button id="btn1">버튼</button>
+    <button id="btn2">버튼</button>
+    <button id="btn3">버튼</button>
+    <script>
+        document.querySelector("#block").style.cssText =
+            `width : 200px; 
+                height : 200px; 
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover
+                `;
+
+        function imgSet(imgUrl) {
+            document.querySelector("#block").style.backgroundImage = `url(${imgUrl})`;
+        }
+
+        imgSet("../../img/pic1.jpg");
+
+        document.querySelector("#btn1").addEventListener("click", function () {
+            imgSet("../../img/pic1.jpg");
+        })
+        document.querySelector("#btn2").addEventListener("click", function () {
+            imgSet("../../img/pic2.jpg");
+        })
+        document.querySelector("#btn3").addEventListener("click", function () {
+            imgSet("../../img/pic3.jpg");
+        })
+    </script>
+</body>
+
+</html>

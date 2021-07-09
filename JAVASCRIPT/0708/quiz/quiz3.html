@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let v1 = Number(prompt("첫번째 값"));
+        let v2 = Number(prompt("두번째 값"));
+
+        alert(`${v1}+${v2}=${v1+v2}`);
+        alert(`${v1}-${v2}=${v1-v2}`);
+        console.log(`${v1}*${v2}=${v1*v2}`);
+        console.log(`${v1}/${v2}=${v1/v2}`);
+        document.write(`<h1>${v1}과${v2}를 하나씩 더하기 전 두 수를 더한 값은 ${(++v1)+(++v2)}입니다.</h1>`);
+        document.write(`<p>${v1}은 ${v2} 보다 ${(v1 > v2)?"큽니다":"작습니다."}</p>`);
+        document.write(`<p> ${v1} ${(v1 < v2)? "<":">"} ${v2}</p>`);
+        document.write(`<input type="text" value="${v1}">
+        <input type "text" value="${v2}"> 
+        <p>${(v1 == v2) || (v1 > v2)? "v1이 v2 이상" : "v1이 v2 미만"}</p>`);
+    </script>
+</body>
+</html>

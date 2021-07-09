@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = prompt("이름을 입력해주세요");
+        let age = prompt("나이를 입력해주세요");
+        let hobby = prompt("취미를 입력해주세요");
+        let addr = prompt("사는곳을 입력해주세요");
+        let num = prompt("강조수준을 입력해주세요");
+        let val = prompt("입력할 값을 입력해주세요");
+        let col = prompt("색을 입력해주세요");
+        let tagName = prompt("강조를 입력해주세요");
+        
+        age = Number(age);
+        num = Number(num);
+
+        alert(`내이름은 ${name}입니다.`);
+        console.log(`제 나이는 ${age}입니다.`);
+        document.write(`제 취미는 ${hobby}입니다`);
+        document.write(`저는 ${addr}에 삽니다`);
+        document.write(`<h${num}>만나서 반갑습니다.</h${num}>`);
+        document.write(`<p><${tagName}>이곳을 강조</${tagName}></p>`);
+        document.write(`<input type= "text" value="${val}">`);
+        document.write(`<div style="width: 300; height: 200px; background-color: ${col};"></div>`);
+    </script>
+</body>
+</html>

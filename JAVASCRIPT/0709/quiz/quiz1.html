@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="v1">
+    <button id="btn">실행</button>
+    <h1 id="h1"></h1>
+    <script>
+        document.querySelector("#btn").addEventListener("click", function(){
+            let val1 = document.getElementById("v1").value
+            let output = document.querySelector("#h1") 
+            if(0 < val1){
+                output.innerHTML = "해당 값은 양수입니다." ;
+            }else if(0 > val1){
+                output.innerHTML = "<h1>해당 값은 음수입니다</h1>";
+            }else{
+                output.innerHTML = "<h1>해당 값은 0입니다.</h1>";
+            }
+        })
+        
+    </script>
+</body>
+</html>

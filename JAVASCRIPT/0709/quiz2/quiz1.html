@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="block"></div>
+    <button id="btn1">버튼</button>
+    <button id="btn2">버튼</button>
+    <button id="btn3">버튼</button>
+    <script>
+        document.querySelector("#block").style.cssText = "width : 200px; height : 200px; background-color: gray";
+        document.querySelector("#btn1").addEventListener("click", function(){
+            document.querySelector("#block").style.backgroundColor = "red";
+        });
+        document.querySelector("#btn2").addEventListener("click", function(){
+            document.querySelector("#block").style.backgroundColor = "blue";
+        });
+        document.querySelector("#btn3").addEventListener("click", function(){
+            document.querySelector("#block").style.backgroundColor = "green";
+        });
+    </script>
+</body>
+</html>
