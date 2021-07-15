@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name : '김영창',
+            address : '경기도 안양시',
+            age : 25,
+            // ES5
+            // teaching : function(){
+            //     console.log("사람들을 가르칩니다.");
+            // },
+            // counseling : function(){
+            //     console.log("취업자 및 창업자 사람들에게 조언을 합니다.");
+            // }
+            // ES6
+            teaching (){
+                console.log("사람들을 가르칩니다.");
+            },
+            
+            counseling() {
+                console.log("취업자 및 창업자 사람들에게 조언을 합니다.");
+            }
+        };
+
+        obj.gender = "male";
+        obj.age = 24;
+        delete obj.address;
+
+        obj.programing = function(){
+            console.log("외주 개발을 합니다.");
+        }
+
+        // console.log(obj.name);
+        // console.log(obj.address);
+        // console.log(obj.age);
+        // console.log(obj.gender);
+
+        console.log(obj["name"]);
+        // console.log(obj["address"]);
+        console.log(obj["age"]);
+        console.log(obj["gender"]);
+
+        console.dir(obj)
+
+        obj.teaching();
+        obj.counseling();
+        obj.programing();
+    </script>
+</body>
+</html>

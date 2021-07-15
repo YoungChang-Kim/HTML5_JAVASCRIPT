@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab{
+            display: flex;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            padding: 0.9rem 1.1rem;
+            font-size: 1.1rem;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" id="tab1">텝메뉴1</button>
+        <button class="tablinks" id="tab2">텝메뉴2</button>
+        <button class="tablinks" id="tab3">텝메뉴3</button>
+    </div>
+
+    <div id="tab1-content" class="tabcontent">
+        <h3>탭메뉴1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maxime amet blanditiis quas voluptatibus quasi, aspernatur dolores ex accusamus nisi cumque consequatur iure vero quisquam ratione doloremque voluptates eaque magni?</p>
+    </div>
+    <div id="tab2-content" class="tabcontent">
+        <h3>탭메뉴2</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia odio distinctio maxime odit itaque, necessitatibus totam enim possimus non dignissimos repudiandae sapiente repellat consequatur sint fugiat reprehenderit. Maxime, ut consequuntur!</p>
+    </div>
+    <div id="tab3-content" class="tabcontent">
+        <h3>탭메뉴3</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem repudiandae quisquam pariatur assumenda blanditiis! Minima, voluptatum ad quae facilis velit accusamus, dolore ab debitis similique quisquam magni sunt consectetur nisi.</p>
+    </div>
+
+    <script>
+        document.querySelector("#tab1").addEventListener("click", function(){openTab("tab1", this);});
+        document.querySelector("#tab2").addEventListener("click", function(){openTab("tab2", this);});
+        document.querySelector("#tab3").addEventListener("click", function(){openTab("tab3", this);});
+
+        function openTab(content, btnObj){
+            let tabcontent = document.querySelectorAll(".tabcontent");
+            let tablinks = document.querySelectorAll(".tablinks");
+            for (let index = 0; index < tabcontent.length; index++) {
+                tabcontent[index].style.display = "none";
+                tablinks[index].style.backgroundColor = "#f1f1f1";
+            }
+            document.querySelector(`#${content}-content`).style.display = "block";
+            btnObj.style.backgroundColor = "#ccc";
+        }
+    </script>
+</body>
+</html>

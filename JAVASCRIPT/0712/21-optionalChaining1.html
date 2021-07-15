@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objA = {
+            user : {
+                name : "abc",
+                score : {
+                    guk : 82,
+                    eng : 75
+                },
+                funcA(){
+                    console.log("funcA 기능")
+                }
+            }
+        }
+
+        console.log(objA.user.score.guk);
+        // console.log(objA.user.score.su);
+        // console.log(objA.user.score1.su);
+
+        // console.log(objA && objA.user && objA.user.score && objA.user.score.su);
+        console.log(objA?.user?.score?.guk);
+        console.log(objA?.user?.score?.su);
+        objA?.user?.funcB?.();
+    </script>
+</body>
+</html>

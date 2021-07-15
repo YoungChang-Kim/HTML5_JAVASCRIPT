@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 수정
+        const objA = {
+            set foo(val){
+                delete this.foo;
+                this.foo = val;
+            },
+            get foo(){
+                delete this.foo;
+                return this.foo = "something";
+            },
+            set foo1(val){
+                delete this.a;
+                this.a = val;
+            },
+            get foo1(){
+                delete this.a;
+                return this.a = "something";
+            }
+        };
+
+        objA.foo = "test1";
+        console.log(objA.foo);
+        objA.foo = "test2";
+        console.log(objA.foo);
+        objA.foo1 = "test3";
+        console.log(objA.foo1);
+        console.dir(objA);
+    </script>
+</body>
+</html>

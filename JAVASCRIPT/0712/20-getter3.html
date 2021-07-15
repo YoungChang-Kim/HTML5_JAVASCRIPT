@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 수정 근거
+        const objA = {
+            set foo(num){
+                delete this.foo;
+                this.foo = num;
+            },
+            get foo(){
+                delete this.foo;
+                return this.foo;
+            }
+        }
+
+        objA.foo = 1;
+        console.log(objA.foo);
+        console.log(objA);
+    </script>
+</body>
+</html>

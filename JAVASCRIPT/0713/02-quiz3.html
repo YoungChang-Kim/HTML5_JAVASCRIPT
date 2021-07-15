@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDIV">
+        <button class="btn" active>1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll(".btn");
+        for (let index = 0; index < btns.length; index++) {
+            btns[index].addEventListener("click", function(){
+                const active = document.querySelector(".active");
+                active.classList.remove("active");
+                this.classList.add("active");
+            })
+            
+        }
+
+    </script>
+</body>
+</html>

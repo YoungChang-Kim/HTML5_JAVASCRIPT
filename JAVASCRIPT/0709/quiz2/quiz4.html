@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #btn1 {
+            width: 100px;
+            height: 50px;
+            background-color: rgba(255, 0, 0, .6);
+            font-weight: bold;
+            color: white;
+        }
+
+        #modalLayer {
+            visibility: hidden;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .4);
+        }
+
+        #modalContent {
+            box-shadow: 3px 5px 10px 1px; 
+            background-color: white;
+            margin: 100px;
+            padding: 50px;
+            position: fixed;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">버튼 클릭</button>
+    <div id="modalLayer">
+        <div id="modalContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos commodi,
+            exercitationem
+            labore
+            totam placeat eaque nemo sed recusandae, dicta autem facere, distinctio eveniet. Laudantium doloribus saepe
+            labore amet dolorum suscipit!
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#btn1").addEventListener("click", function () {
+            document.querySelector("#modalLayer").style.visibility = "visible";
+        })
+        document.querySelector("#modalLayer").addEventListener("click", function () {
+            document.querySelector("#modalLayer").style.visibility = "hidden";
+        })
+    </script>
+</body>
+
+</html>

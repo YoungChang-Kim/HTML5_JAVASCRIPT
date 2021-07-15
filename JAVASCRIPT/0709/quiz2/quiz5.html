@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        li {
+            margin: 0;
+            display: inline-block;
+        }
+        button {
+            margin: 0;
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+        }
+        .tab {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><button id="tab-menu_1">탭메뉴1</button></li>
+            <li><button id="tab-menu_2">탭메뉴2</button></li>
+            <li><button id="tab-menu_3">탭메뉴3</button></li>
+        </ul>
+    </nav>
+    <div class="tab" id="tab1">
+        <h3>탭메뉴1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <div class="tab" id="tab2">
+        <h3>탭메뉴2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <div class="tab" id="tab3">
+        <h3>탭메뉴3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+
+    <script>
+        document.querySelector("#tab-menu_1").addEventListener("click", function(){
+            document.querySelector("#tab-menu_1").style.backgroundColor = "#bbb"
+            document.querySelector("#tab-menu_1").style.border = "1px solid black"
+            document.querySelector("#tab-menu_2").style.backgroundColor = "#fff"
+            document.querySelector("#tab-menu_2").style.border = "none"
+            document.querySelector("#tab-menu_3").style.backgroundColor = "#fff"
+            document.querySelector("#tab-menu_3").style.border = "none"
+            document.querySelector("#tab1").style.display = "grid";
+            document.querySelector("#tab2").style.display = "none";
+            document.querySelector("#tab3").style.display = "none";
+        });
+        document.querySelector("#tab-menu_2").addEventListener("click", function(){
+            document.querySelector("#tab-menu_2").style.backgroundColor = "#bbb"
+            document.querySelector("#tab-menu_2").style.border = "1px solid black"
+            document.querySelector("#tab-menu_1").style.backgroundColor = "#fff"
+            document.querySelector("#tab-menu_1").style.border = "none"
+            document.querySelector("#tab-menu_3").style.backgroundColor = "#fff"
+            document.querySelector("#tab-menu_3").style.border = "none"
+            document.querySelector("#tab1").style.display = "none";
+            document.querySelector("#tab3").style.display = "none";
+            document.querySelector("#tab2").style.display = "grid";
+        });
+        document.querySelector("#tab-menu_3").addEventListener("click", function(){
+            document.querySelector("#tab-menu_3").style.backgroundColor = "#bbb"
+            document.querySelector("#tab-menu_3").style.border = "1px solid black"
+            document.querySelector("#tab-menu_1").style.backgroundColor = "#fff"
+            document.querySelector("#tab-menu_1").style.border = "none"
+            document.querySelector("#tab-menu_2").style.backgroundColor = "#fff"
+            document.querySelector("#tab-menu_2").style.border = "none"
+            document.querySelector("#tab1").style.display = "none";
+            document.querySelector("#tab2").style.display = "none";
+            document.querySelector("#tab3").style.display = "grid";
+        });
+    </script>
+</body>
+</html>
