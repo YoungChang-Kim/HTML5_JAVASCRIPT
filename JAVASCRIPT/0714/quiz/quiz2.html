@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #header{
+            position: fixed;
+            width: 430px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+        }
+
+        #content{
+            /* overflow: scroll; */
+            height: 500px;
+            width: 450px;
+            
+        }
+        
+        h1 {
+            font-size: 6em;
+        }
+        .container {
+            width: 450px;
+            overflow: scroll;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" onscroll="myscroll()">
+        <div id="header">
+            <h1>Header</h1>
+        </div>
+        <div id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime sequi voluptatem ea minus doloribus quam suscipit deleniti, omnis recusandae voluptate similique consequatur ducimus cumque ad aperiam fugiat blanditiis non?
+        </div>
+    </div>
+    <script>
+        function myscroll(){
+        const el = document.querySelector(".container");
+        let y = el.scrollTop;
+        if(y > 10){
+            document.querySelector("h1").style.fontSize = "2em";
+        }else{
+            document.querySelector("h1").style.fontSize = "";
+        }
+    }
+    </script>
+</body>
+
+</html>

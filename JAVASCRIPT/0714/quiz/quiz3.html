@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 600px;
+            overflow: scroll;
+        }
+        #scrollIndicator {
+            display: flex;
+            position: fixed;
+
+            width: 480px;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            background-color: #eee;
+            font-size: 1.5em;
+        }
+        progress{
+            width: 100%;
+        }
+
+        #content {
+            font-size: 1.2em;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onscroll="myscroll()">
+        <div id="scrollIndicator">
+            <h1>Scroll Indicator</h1>
+            <progress value="" max="100"></progress>
+        </div>
+        <div id="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusamus optio saepe illum, in nam modi maxime labore eaque earum velit deleniti, dolorum voluptas assumenda inventore tenetur rerum perferendis nostrum?
+            </p>
+        </div>
+    </div>
+    <script>
+        function myscroll(){
+            const el = document.querySelector(".container");
+            let y = el.scrollTop;
+            document.querySelector("progress").value = `${y/8}`;
+        }
+        
+        
+    </script>
+</body>
+</html>

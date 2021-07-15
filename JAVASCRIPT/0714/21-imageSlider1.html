@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slideUp {
+            animation-name: slideUp;
+            animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slideUp{
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        body {
+            height: 1500px;
+        }
+
+        .col-1 {
+            float: left;
+        }
+
+        .col-2 {
+            float: left;
+            padding-left: 25px;
+        }
+
+        img {
+            width: 180px;
+            height: 100px;
+            visibility: hidden;
+        }
+
+        hr {
+            margin-top: 800px;
+        }
+
+        #view {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="view"></div>
+    <p>제목</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat facere animi aliquam ratione veritatis iure. Error ipsam, architecto dicta dolor alias odit, repellendus nam deserunt eveniet in vitae veritatis itaque.</p>
+
+    <hr>
+    <div class="col-1">
+        <img src="../img/img_pulpit.jpg" width="340" height="250" alt="" id="myImg">
+    </div>
+
+    <div class="col-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corrupti suscipit quam doloribus harum odit architecto soluta maiores voluptatibus, dignissimos culpa ducimus nihil cumque natus, optio explicabo porro quaerat totam?
+    </div>
+
+    <script>
+        window.onscroll = function(){
+            // if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+            //     document.getElementById("myImg").className = "slideUp";
+            // }
+            // const img = document.getElementById("myImg");
+            // let x = JSON.stringify(img.getBoundingClientRect());
+            // document.getElementById("view").textContent = x;
+            if(document.getElementById("myImg").getBoundingClientRect().y < 350){
+                document.getElementById("myImg").className = "slideUp";
+            }else{
+                document.getElementById("myImg").className = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
