@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="myInput" placeholder="Search for names." style="border: none;">
+    <ul style="list-style-type: none; padding-left: 0;">
+        <li class="myList" id="list1">Adele</li>
+        <li class="myList" id="list2">Agnes</li>
+        <li class="myList" id="list3">Billy</li>
+        <li class="myList" id="list4">Bob</li>
+        <li class="myList" id="list5">Calvin</li>
+        <li class="myList" id="list6">Christina</li>
+        <li class="myList" id="list7">Cindy</li>
+    </ul>
+    <script>
+        document.getElementById("myInput").addEventListener("input", function () {
+            let val = this.value.toUpperCase();
+            const list = document.querySelectorAll(".myList");
+
+            for (let index = 0; index < list.length; index++) {
+                if (list[index].innerHTML.toUpperCase().indexOf(val) != -1) {
+                    list[index].style.display = "block";
+                } else {
+                    list[index].style.display = "none";
+                }
+            }
+            ;
+        })
+    </script>
+</body>
+
+</html>
