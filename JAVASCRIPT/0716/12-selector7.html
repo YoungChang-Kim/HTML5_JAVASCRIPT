@@ -6,7 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // $("#wrap a[target]").css({"color" : "#f00"});
+            // $("#wrap a[href^=https]").css({"color" : "#0F0"});
+            // $("#wrap a[href$=net]").css({"color" : "#00f"});
+            // $("#wrap a[href*=google]").css({"color" : "#f0f"});
+            $("#member_f :text").css({"background-color" : "#ff0"});
+            $("#member_f :password").css({"background-color" : "#0ff"});
+        });
+    </script>
 </head>
 
 <body>
