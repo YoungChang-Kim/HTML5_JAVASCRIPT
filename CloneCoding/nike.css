@@ -1,18 +1,110 @@
-[class^="ns-"],
-[class*=" ns-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "nike" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* common */
+* {
+  box-sizing: border-box;
 }
 
-.ns-heart-line:before {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+.head1 {
+  background-color: #f1f1f1;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.head1_nav {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.head1_nav li::after {
+  font-size: 0.8rem;
+  content: "|";
+}
+
+.head1_nav li:last-child:after {
+  content: "";
+}
+
+.head1_nav li a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.colabologo {
+  display: flex;
+  flex-direction: row;
+}
+
+.colabologo li {
+  padding-left: 10px;
+}
+
+.head2 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+#logo_nike {
+  padding: 1em;
+}
+
+.head2_nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.head2_nav ul li {
+  padding: 10px;
+}
+
+.ns-heart-line::before {
   content: "\e945";
+  font-size: 24px;
+}
+
+.ns-briefcase-line::before {
+  content: "\e94b";
+  font-size: 24px;
+}
+
+.ns-serch-large::before {
+  content: "\e94b";
+  font-size: 24px;
+}
+
+.head2_right {
+  display: flex;
+  flex-direction: row;
+}
+
+.head2_right li {
+  padding: 10px;
+}
+
+.Releases_inner {
+  display: flex;
+  flex-direction: row;
 }
