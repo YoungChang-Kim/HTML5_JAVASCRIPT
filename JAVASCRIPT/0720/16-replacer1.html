@@ -10,13 +10,12 @@
     <script>
         function replacer(key, value){
             if(typeof value == "string"){
-                return undefined
-            }else {
-                return value;
+                return undefined;
             }
+            return value ;
         }
 
-        const foo = {foundation : "Mozila", model : "box", weak : 45, transport : "car", month: 7};
+        const foo = {foundation : "Mozila", model : "box", weak : 45, transport : "car", month : 7};
         const jsonString = JSON.stringify(foo, replacer, "\n");
         console.log(jsonString);
     </script>

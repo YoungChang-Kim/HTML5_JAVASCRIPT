@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = JSON.parse("{}");
+        console.log(typeof a);
+        let b = JSON.parse("true");
+        console.log(typeof b);
+        let c = JSON.parse(`"foo"`);
+        console.log(typeof c);
+        let d = JSON.parse(`[1, 5, "false"]`);
+        console.log(typeof d);
+        let e = JSON.parse("null");
+        console.log(typeof e);
+        let f = JSON.parse(`{"a":1, "b":"abc"}`);
+        console.log(typeof f);
+
+        let g = [1,2,3,4];
+        console.log(typeof g);
+    </script>
+</body>
+</html>

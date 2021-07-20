@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        #head_container{
+            text-align: center;
+        }
+        
+        #main_img {
+            height: 600px;
+            width: 100%;
+            background-size: cover;
+            background: url("images/hero.jpg") center no-repeat;
+        }
+
+        #inner_head_container, #nav_bar ul {
+            display: flex;
+            margin: 0 20% 0 20% ;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #left_head {
+            display: flex;
+            }
+
+        #left_head li {
+            padding: 3px;
+        }
+
+        #left_head li:hover {
+            cursor: pointer;
+        }
+
+        #left_head li:first-child::after {
+            content: url("images/social_icon1.gif");
+        }
+
+        #left_head li:nth-child(2)::after {
+            content: url("images/social_icon2.gif");
+        }
+
+        #left_head li:nth-child(3)::after {
+            content: url("images/social_icon3.gif");
+        }
+
+        #left_head li:last-child:after {
+            padding-left: 10px;
+            content: url("images/btn_mileage.gif");
+        }
+
+        #signature::after {
+            content: url("images/signature.gif");
+        }
+        #signature:hover{
+            cursor: pointer;
+        }
+
+        #right_head {
+            font-size: 0.5rem;
+        }
+
+        #right_head li {
+            float: left;
+            display: flex;
+            padding-left: 10px;
+        }
+
+        #nav_bar ul {
+            padding: 2% 10% 2% 10%;
+        }
+        #nav_bar li {
+            margin: 0 20px 0 20px;
+        }
+
+        #nav_bar li:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        #nav_drop {
+            position: fixed;
+            display: none;
+            justify-content: center;
+            z-index: 1;
+            background-color: white;
+            width: 100%;
+        }
+        #nav_drop li{
+            padding: 0 20px 0 20px;
+            margin: 20px;
+        }
+
+        #nav_drop li:hover{
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #hamberg_menu::after{
+            content: url("images/gnb_btn.png");
+            display: none;
+        }
+        #hamberg_menu:hover{
+            cursor: pointer;
+        }
+
+        #hamber_modal_overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        @media (max-width:800px) {
+            #right_head {
+                display: none;
+            }
+            #hamberg_menu::after{
+                display: inline-block;
+            }
+            #nav_bar {
+                display: none;
+            }
+        }
+        @media (max-width:1050px) {
+            #nav_bar ul li:last-child{
+                display: none;
+            }
+        }
+
+        #right_nav{
+            display: none;
+            right: 0;
+            height: 100%;
+            position: absolute;
+            background-color: white;
+            font-size: 3rem;
+        }
+        #right_nav li{
+            padding: 1rem;
+        }
+        
+        #right_nav li:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        #right_nav ul ul li{
+            display: none;
+        }
+        
+        
+
+        </style>
+        <script>
+            $(function () {
+                // $("#nav_bar li").hover(function(){
+                //     $("#nav_drop").css("display", "flex");
+                // },function(){
+                //     $("#nav_drop").css("display", "none");
+                // })
+                $("#nav_bar li").on("mouseover",function(){
+                    $("#nav_drop").slideDown(1000, "linear");
+                    $("#nav_drop").css("display","flex");
+                })
+                $("#nav_drop").on("mouseleave", function(){
+                    $("#nav_drop").css("display", "none");
+                });
+
+                $("#hamberg_menu").click(function(){
+                    $("#hamber_modal_overlay").css("display", "flex");
+                    $("#right_nav").slideDown("display", function(){
+                        $(this).css("width", "40%");
+                    })
+                })
+
+                $("#hamber_modal_overlay").click(function(){
+                    $(this).css("display", "none")
+                    $("#right_nav").css("display", "none")
+                })
+
+                $("#right_nav li").hover(function(){
+                    $("#right_nav > ul").slideDown("display", "flex")
+                    },function(){
+                    $("#right_nav > ul").slideDown("display", "none")})
+
+            });
+        </script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="hamber_modal_overlay"></div>
+    <div id="right_nav">
+        <ul>
+            <li>ZISHEN</li>
+            <ul>
+                <li>About</li>
+                <li>Lookbook</li>
+                <li>Catalogue</li>
+            </ul>
+            <li>ZISHEN HOMME</li>
+            <ul>
+                <li>About</li>
+                <li>Lookbook</li>
+                <li>Catalogue</li>
+            </ul>
+            <li>MEDIA</li>
+            <ul>
+                <li>Movie</li>
+                <li>news</li>
+                <li>event</li>
+            </ul>
+            <li>SERVICE</li>
+            <ul>
+                <li>Faq</li>
+                <li>1:1 Service</li>
+                <li>Group Order</li>
+            </ul>
+            <li>SHOP INFO</li>
+            <ul>
+                <li>Shop Info</li>
+                <li>Open Guide</li>
+            </ul>
+            <li>COMPANY</li>
+            <ul>
+                <li>Company</li>
+            </ul>
+        </ul>
+    </div>
+    <header>
+        <div id="head_container">
+            
+            <div id="inner_head_container">
+                <ul id="left_head">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div id="signature"></div>
+                <ul id="right_head">
+                    <li>Login</li>
+                    <li>Join</li>
+                    <li>개인정보취급방침</li>
+                </ul>
+                <div id="hamberg_menu"></div>
+                </div>
+            <nav id="nav_bar">
+                <ul>
+                    <li>ZISHEN</li>
+                    <li>ZISHEN HOMME</li>
+                    <li>MEDIA</li>
+                    <li>SERVICE</li>
+                    <li>SHOP INFO</li>
+                    <li>COMPANY</li>
+                </ul>
+            </nav>
+            <div id="nav_drop">
+                <ul>
+                    <li>About</li>
+                    <li>Lookbook</li>
+                    <li>Catalogue</li>
+                </ul>
+                <ul>
+                    <li>About</li>
+                    <li>Lookbook</li>
+                    <li>Catalogue</li>
+                </ul>
+                <ul>
+                    <li>Movie</li>
+                    <li>news</li>
+                    <li>event</li>
+                </ul>
+                <ul>
+                    <li>Faq</li>
+                    <li>1:1 Service</li>
+                    <li>Group Order</li>
+                </ul>
+                <ul>
+                    <li>Shop Info</li>
+                    <li>Open Guide</li>
+                </ul>
+                <ul>
+                    <li>Company</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div id="main_img"></div>
+    </main>
+</body>
+
+</html>
