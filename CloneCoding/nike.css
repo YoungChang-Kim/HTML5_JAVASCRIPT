@@ -1,13 +1,88 @@
-/* common */
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* common */
+html,body {
+  position: relative;
+  height: 100%;
+}
 body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 50rem;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100rem;
+  font-size: 18px;
+  background: #fff;
+  
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+* {
+  box-sizing: border-box;
 }
 
 ul {
@@ -81,12 +156,12 @@ img {
 }
 
 .ns-heart-line::before {
-  content: "\e945";
+  content: "\e87d";
   font-size: 24px;
 }
 
 .ns-briefcase-line::before {
-  content: "\e94b";
+  content: "\e8b8";
   font-size: 24px;
 }
 
@@ -104,7 +179,7 @@ img {
   padding: 10px;
 }
 
-.Releases_inner {
+.submenu_inner {
   display: flex;
   flex-direction: row;
 }
