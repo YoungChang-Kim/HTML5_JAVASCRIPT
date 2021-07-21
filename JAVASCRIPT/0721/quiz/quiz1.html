@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.3-web/css/all.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            width: 400px;
+            height: 1000px;
+            display: grid;
+        }
+        .img {
+            background: url("../img/profile.jpg") no-repeat center;
+            background-size: cover;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 문제1 : JSON으로 파싱한 데이터를 뿌려주기-->
+    <div class="container">
+        <div class="img"></div>
+        <div class="introduce">
+            <h1 class="name"></h1>
+            <p class="job"></p>
+            <p class="work"></p>
+            <ul>
+                <li><i class="fas fa-basketball-ball"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-invision"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+            </ul>
+        </div>
+        <div class="connection">연결하기</div>
+    </div>
+</body>
+</html>
