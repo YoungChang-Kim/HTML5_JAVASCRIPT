@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Sports {
+            constructor(member){
+                this.member = member;
+                console.log(member);
+            }
+
+            setGround(ground){
+                this.ground = ground;
+            }
+        }
+
+        class Soccer extends Sports{
+            constructor(member){
+                super(member);
+                this.member = 456;
+                console.log(this.member);
+            }
+            setGround(ground){
+                super.setGround(ground);
+                this.ground = ground+1;
+            }
+        }
+
+        const obj = new Soccer();
+        obj.setGround("상암구장");
+        console.log(obj.ground);
+    </script>
+</body>
+</html>

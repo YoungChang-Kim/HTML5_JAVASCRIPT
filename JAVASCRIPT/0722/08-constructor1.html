@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = function(name, age) {
+            this.name = name;
+            this.age = age;
+            return 1;
+        }
+
+        let a = new obj("홍길동", 25);
+        console.log(a);
+
+        class Obj1 {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+                return 2
+            }
+
+            getName(){
+                return this.name;
+            }
+        }
+
+        const obj1 = new Obj1("신사임당", 41);
+        console.log(obj1.getName());
+        let b = Obj1("김삿갓", 48);
+        console.log(b);
+    </script>
+</body>
+</html>
